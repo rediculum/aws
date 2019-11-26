@@ -1,4 +1,13 @@
 #!/bin/bash
+#
+# This bootstrap script installs, starts and enables apache with php.
+# The output of the website shows the current availability zone of the instance.
+#
+# Put more instances (Launch More Like This) in different AZs and get them together in a target group.
+# Put an ELB in front and see how the AZ changes randomly.
+#
+# Tue Nov 26 14:19:07 CET 2019 init
+#
 yum update -y
 yum install php -y
 systemctl start httpd; systemctl enable httpd
